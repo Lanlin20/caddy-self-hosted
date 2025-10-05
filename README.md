@@ -47,7 +47,7 @@ This setup is designed to work with other services on the `shared_network`. To a
 
 ## See Also
 
-Check out other self-hosted database solutions:
+Check out other self-hosted solutions:
 
 -   [postgresql-self-hosted](https://github.com/AiratTop/postgresql-self-hosted)
 -   [mysql-self-hosted](https://github.com/AiratTop/mysql-self-hosted)
