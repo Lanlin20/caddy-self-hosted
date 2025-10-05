@@ -1,0 +1,20 @@
+# This is a sample Caddyfile. You can edit this file to add your own services.
+
+# Main n8n service.
+# Make sure to change the subdomain and the service name to match your setup.
+
+${SUBDOMAIN}.${DOMAIN_NAME} {
+	# Prevents search engines from indexing this site.
+	header X-Robots-Tag "noindex, nofollow"
+
+	# Forwards all traffic to the n8n backend service running on port 5678.
+	reverse_proxy n8n-master:5678 {
+		# Disables response buffering, which is crucial for Server-Sent Events (SSE) used by n8n.
+		flush_interval -1
+	}
+}
+
+# Example for another service
+# another-service.your-domain.com {
+# 	reverse_proxy another-service-container-name:8080
+# }
