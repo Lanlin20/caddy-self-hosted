@@ -45,7 +45,7 @@ It is configured to connect to a shared Docker network, allowing easy integratio
 
 ## Connecting with other services
 
-This setup is designed to work with other services on the `shared_network`. To add a new service, add a new block to the `Caddyfile` in the `caddy_config` directory.
+This setup is designed to work with other services on the `shared_network`. To add a new service, add a new block to the `Caddyfile` in the `config` directory.
 
 ## See Also
 
