@@ -1,5 +1,7 @@
 # Caddy Self-Hosted with Docker
 
+![caddy-self-hosted](https://repository-images.githubusercontent.com/1070311608/27c6652a-4b1c-45e6-8b19-9c2c531d9d50)
+
 This repository provides a `docker-compose` setup to run a self-hosted [Caddy](https://caddyserver.com/) reverse proxy.
 
 It is configured to connect to a shared Docker network, allowing easy integration with other services like [n8n](https://github.com/AiratTop/n8n-self-hosted).
