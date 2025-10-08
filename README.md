@@ -28,8 +28,8 @@ It is configured to connect to a shared Docker network, allowing easy integratio
     docker network create shared_network
     ```
 
-3.  **Configure environment variables:**
-    Open the `.env` file and update the variables with your own settings.
+3.  **Configure Caddyfile:**
+    Open the `config/Caddyfile` file and update the config with your own settings.
 
 4.  **Start the service:**
     ```bash
