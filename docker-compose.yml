@@ -4,7 +4,8 @@ services:
     container_name: caddy
     hostname: caddy
     image: caddy:latest
-    networks: ['shared_network']
+    networks:
+      - shared_network
     restart: always
     ports:
       - '80:80'
