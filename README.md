@@ -28,10 +28,13 @@ It is configured to connect to a shared Docker network, allowing easy integratio
     docker network create shared_network
     ```
 
-3.  **Configure Caddyfile:**
-    Open the `config/Caddyfile` file and update the config with your own settings.
+3.  **Set your domain:**
+    Edit the `.env` file and set `DOMAIN_NAME` to your primary domain (for example, `DOMAIN_NAME=example.com`).
 
-4.  **Start the service:**
+4.  **Configure Caddyfile:**
+    Open the `config/Caddyfile` file and adjust any reverse-proxy blocks you need.
+
+5.  **Start the service:**
     ```bash
     docker compose up -d
     ```
