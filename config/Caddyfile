@@ -13,7 +13,7 @@
 # Get n8n repo here: [n8n-self-hosted](https://github.com/AiratTop/n8n-self-hosted)
 # Make sure to change the subdomain and the service name to match your setup.
 
-n8n.your-domain.com {
+n8n.{$DOMAIN_NAME} {
 	# Prevents search engines from indexing this site.
 	header X-Robots-Tag "noindex, nofollow"
 
@@ -31,6 +31,6 @@ n8n.your-domain.com {
 }
 
 # Example for another service
-# another-service.your-domain.com {
+# another-service.{$DOMAIN_NAME}{
 # 	reverse_proxy another-service-container-name:8080
 # }
